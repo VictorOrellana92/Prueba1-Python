@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+				body {background-color: orange}
+
+		</style>
+		<title></title>
+	</head>
+
+	<body>
+			{% for i in mascota_list%}
+				<p>{{i.nombre}}, {{i.comentario}}</p>
+				
+			{%endfor%}
+	</body>
+</html>
