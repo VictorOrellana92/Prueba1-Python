@@ -9,9 +9,53 @@
 	</head>
 
 	<body>
-			{% for i in mascota_list%}
-				<p>{{i.nombre}}, {{i.comentario}}</p>
-				
-			{%endfor%}
+
+				<h1>Listado de Todas las mascotas</h2>
+					<table border="1px" cellpadding="20px">
+					
+						<tr>
+							<th>ID</th>
+							<th>Nombre</th>
+							<th>Sexo</th>
+							<th>Fecha nacimiento</th>
+							<th>Color</th>
+							<th>Comuna</th>
+							<th>comentario</th>
+							<th>raza</th>
+						</tr>
+							{% for i in mascota_list %}
+						<tr>
+							<td>{{i.id_usuario}}</td>
+							<td>{{i.nombre}}</td>
+							<td>{{i.sexo}}</td>
+							<td>{{i.fecha_nacimiento}}</td>
+							<td>{{i.color}}</td>
+							<td>{{i.comuna_residencia}}</td>
+							<td>{{i.comentario}}</td>
+							<td>{{i.raza}}</td>
+						</tr>
+							{% endfor %}
+					</table>
+	
+				<h1>Listado de mascotas Encontradas con sus datos</h2>
+					<table border="1px" cellpadding="20px">
+						<tr>
+							<th>Caza Recompensa</th>
+							<th>Fecha Encuentro</th>
+							<th>Lugar Encuentro</th>
+							<th>Comentario</th>
+							<th>Sexo</th>
+						</tr>
+							{% for a in mascotas_encontradas %}
+						<tr>
+							<td>{{a.id_caza_recompensa}}</td>
+							<td>{{a.fecha_encuentro}}</td>
+							<td>{{a.lugar_encuentro}}</td>
+							<td>{{a.comentario}}</td>
+							<td>{{a.sexo}}</td>
+						</tr>
+							{% endfor %}
+					</table>	
+
 	</body>
 </html>

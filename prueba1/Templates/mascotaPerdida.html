@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+				body {background-color: orange}
+
+		</style>
+		<title></title>
+	</head>
+
+	<body>
+				<h1>Listado de mascotas perdidas con sus datos</h2>
+					<table border="1px" cellpadding="20px"> 
+						<tr>
+							<th>ID</th>
+							<th>Nombre</th>
+							<th>Fecha Extravio</th>
+							<th>Lugar Extravio</th>
+							<th>Recompensa</th>
+						</tr>
+							{% for a in perdidos %}
+						<tr>
+							<td>{{a.id_mascota}}</td>
+							<td>{{a.nombre}}</td>
+							<td>{{a.fecha_extravio}}</td>
+							<td>{{a.lugar_extravio}}</td>
+							<td>{{a.recompensa}}</td>
+						</tr>
+							{% endfor %}
+					</table>	
+
+
+
+	</body>
+</html>
